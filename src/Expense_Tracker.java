@@ -51,7 +51,7 @@ public class Expense_Tracker {
                } else if (args.length >= 3 && args[1].equals("--month")) {
                   manager.summery(Integer.parseInt(args[2]));
                }else if (args.length >= 3 && args[1].equals("--category")) {
-                  manager.summery(args[2]);
+                  manager.summery(args[2].toLowerCase());
                } else {
                   throw new CommandNotFoundException("Required values or options not found.");
                }

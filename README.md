@@ -137,3 +137,5 @@ The application uses Jackson for handling JSON data, allowing for easy storage a
 ## Conclusion
 
 This Expense Tracker CLI application provides a straightforward way to manage personal finances through the command line. With the integration of Jackson for JSON data handling, it ensures data is persistently stored and easily accessible.
+
+https://roadmap.sh/projects/expense-tracker

@@ -2,34 +2,22 @@
   "budgetEnabled" : true,
   "expenseList" : [ {
     "id" : 1,
-    "description" : "Lunch",
-    "category" : "AllInOneCategory",
-    "expense" : 70.0,
+    "description" : "Puma-Bought a Shoe",
+    "category" : "Shopping",
+    "expense" : 699.0,
     "date" : "2024-09-23"
   }, {
     "id" : 2,
-    "description" : "Dinner",
-    "category" : "AllInOneCategory",
-    "expense" : 700.0,
+    "description" : "Dinner at SM Imperial",
+    "category" : "Food",
+    "expense" : 300.0,
     "date" : "2024-09-23"
   }, {
     "id" : 3,
-    "description" : "Dinner at PizzaHut",
-    "category" : "AllInOneCategory",
-    "expense" : 700.0,
-    "date" : "2024-09-23"
-  }, {
-    "id" : 4,
-    "description" : "Dinner at Barbeque",
-    "category" : "AllInOneCategory",
-    "expense" : 70.0,
-    "date" : "2024-09-23"
-  }, {
-    "id" : 5,
-    "description" : "Dinner at Barbeque",
-    "category" : "AllInOneCategory",
-    "expense" : 5.0,
+    "description" : "PVR Movies",
+    "category" : "Fun",
+    "expense" : 100.0,
     "date" : "2024-09-23"
   } ],
-  "budgetLimit" : 2100.0
+  "budgetLimit" : 1000.0
 }
