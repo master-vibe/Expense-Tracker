@@ -11,13 +11,10 @@ res=false
 for arg in "$@"; do
     if [ "$arg" == "-r" ]; then
         res=true
-        shift  # Remove -r from the arguments list
+        shift  # Remove -r from the arguments list  
         break
     fi
 done
-
-# Capture all additional arguments (after removing -r if present)
-additionalArgs="$*"
 
 # Create the output directory if it doesn't exist
 if [ ! -d "$outputDir" ]; then
@@ -27,7 +24,7 @@ fi
 # Compile if needed (check for missing directory or specific class files)
 if [ "$res" = true ] || [ ! -f "$outputDir/Expense_Tracker.class" ]; then
     echo "Initializing..."
-    javac -cp "lib/jackson-core.jar:lib/jackson.jar" -d lib/classes src/CommandNotFoundException.java src/Expense_Tracker.java src/Expense.java src/Manager.java
+    javac -cp "lib/jackson-core.jar;lib/jackson.jar" -d lib/classes src/CommandNotFoundException.java src/Expense_Tracker.java src/Expense.java src/Manager.java
 
     if [ $? -ne 0 ]; then
         echo "Error: Compilation failed."
@@ -36,7 +33,7 @@ if [ "$res" = true ] || [ ! -f "$outputDir/Expense_Tracker.class" ]; then
 fi
 
 # Run the Java main class with additional arguments
-java -cp "lib/classes:lib/jackson-core.jar:lib/jackson.jarlib/jackson-annotations.jar" Expense_Tracker $additionalArgs
+java -cp "lib/classes;lib/jackson-core.jar;lib/jackson.jar;lib/jackson-annotations.jar" Expense_Tracker "$@" 
 if [ $? -ne 0 ]; then
     echo "Error: Application execution failed."
     exit 1

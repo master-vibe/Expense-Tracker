@@ -29,8 +29,6 @@ if not exist "%outputDir%" mkdir "%outputDir%"
 :: Compile if needed (check for missing directory or specific class files)
 if not exist "%outputDir%" set res=true
 if not exist "%outputDir%\%mainClass%.class" set res=true
-@REM if not exist "%outputDir%\TaskManager.class" set res=true
-@REM if not exist "%outputDir%\Tasks.class" set res=true
 
 if defined res (
     echo Initializing...
