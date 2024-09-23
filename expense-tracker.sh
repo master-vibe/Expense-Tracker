@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sourceDir="src"
-outputDir="lib\classes"
+outputDir="lib/classes"
 mainClass="Expense_Tracker"  # Replace with your main class name (without extension)
 
 # Initialize the res variable to false
@@ -25,7 +25,7 @@ if [ ! -d "$outputDir" ]; then
 fi
 
 # Compile if needed (check for missing directory or specific class files)
-if [ "$res" = true ] || [ ! -f "$outputDir/github_activity.class" ]; then
+if [ "$res" = true ] || [ ! -f "$outputDir/Expense_Tracker.class" ]; then
     echo "Initializing..."
     javac -cp "lib\jackson-core.jar;lib\jackson.jar" -d lib/classes src/CommandNotFoundException.java src/Expense_Tracker.java src/Expense.java src/Manager.java
 
