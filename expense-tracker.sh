@@ -27,7 +27,7 @@ fi
 # Compile if needed (check for missing directory or specific class files)
 if [ "$res" = true ] || [ ! -f "$outputDir/github_activity.class" ]; then
     echo "Initializing..."
-    javac -cp "lib\jackson-core.jar;lib\jackson.jar" -d lib\classes src\*.java
+    javac -cp "lib\jackson-core.jar;lib\jackson.jar" -d lib\classes src/CommandNotFoundException.java src/Expense_Tracker.java src/Expense.java src/Manager.java
 
     if [ $? -ne 0 ]; then
         echo "Error: Compilation failed."
