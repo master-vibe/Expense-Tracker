@@ -24,7 +24,7 @@ fi
 # Compile if needed (check for missing directory or specific class files)
 if [ "$res" = true ] || [ ! -f "$outputDir/Expense_Tracker.class" ]; then
     echo "Initializing..."
-    javac -cp "lib/jackson-core.jar;lib/jackson.jar" -d lib/classes src/CommandNotFoundException.java src/Expense_Tracker.java src/Expense.java src/Manager.java
+    javac -cp "lib/jackson-core.jar:lib/jackson.jar" -d lib/classes src/CommandNotFoundException.java src/Expense_Tracker.java src/Expense.java src/Manager.java
 
     if [ $? -ne 0 ]; then
         echo "Error: Compilation failed."
@@ -33,7 +33,7 @@ if [ "$res" = true ] || [ ! -f "$outputDir/Expense_Tracker.class" ]; then
 fi
 
 # Run the Java main class with additional arguments
-java -cp "lib/classes;lib/jackson-core.jar;lib/jackson.jar;lib/jackson-annotations.jar" Expense_Tracker "$@" 
+java -cp "lib/classes:lib/jackson-core.jar:lib/jackson.jar:lib/jackson-annotations.jar" Expense_Tracker "$@" 
 if [ $? -ne 0 ]; then
     echo "Error: Application execution failed."
     exit 1
