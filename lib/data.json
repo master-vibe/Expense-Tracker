@@ -18,6 +18,12 @@
     "category" : "Fun",
     "expense" : 100.0,
     "date" : "2024-09-23"
+  }, {
+    "id" : 4,
+    "description" : "Ayush ki gaand bahut bada",
+    "category" : "AllInOneCategory",
+    "expense" : 5.0,
+    "date" : "2024-09-23"
   } ],
   "budgetLimit" : 1000.0
 }
